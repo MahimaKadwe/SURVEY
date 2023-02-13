@@ -1,0 +1,14 @@
+.example-form {
+    min-width: 150px;
+    max-width: 1000px;
+    width: 1000px;
+  }
+  
+  .example-full-width {
+    width: fit-content;
+  }
+
+  input {
+    background-color:white ;
+    width :fit-content;
+  }

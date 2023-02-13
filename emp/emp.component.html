@@ -1,0 +1,58 @@
+<mat-toolbar>
+    <h1> SURVEY FORMS </h1>
+  </mat-toolbar>
+  <body>
+  <!-- <div class="container">
+      <h1> MY FORMS </h1>  -->
+      <button class="ques" ng-click="customExpression"><a routerLink="../response"> RESPONSES </a></button>
+      <!-- <button class="res"><a routerLink="../setting"> SETTINGS </a></button> -->
+ 
+
+  
+<input name="title" type placeholder= "ENTER TITLE" [(ngModel)]= "title" >
+
+<input name="description" type placeholder= "ENTER DESCRIPTION" [(ngModel)]= "description">
+
+  <div cdkDropListGroup>
+    <div class="example-container1">
+      <h3>COMPONENTS</h3>
+  
+      <div
+        cdkDropList
+        [cdkDropListData]="todo"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+      </div>
+    </div>
+  
+    <div class="example-container">
+      <h2>FORM</h2>
+  
+      <div
+        cdkDropList
+        class="example-list"
+        [cdkDropListData]="done"
+        (cdkDropListDropped)="drop($event)">
+        <!-- <div class="example-box" *ngFor="let item of tasks; let i =index" cdkDrag>{{item.description}}
+          <div class="box">
+            <button (click)="deleteTask(i)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            <button (click)="onEdit(item, i)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+          </div>
+        </div> -->
+        <div class="example-box" *ngFor="let item of currentContainer, let i =index" cdkDrag>
+          <div class="box">
+            <button (click)="deleteTask(i)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+          
+        
+          <app-input name="questions" *ngIf="item === 'Input'" [(ngModel)]= "questions"></app-input>
+          <app-radio name="questions" *ngIf="item === 'Radio'" [(ngModel)]= "questions"></app-radio>
+          <app-checkbox name="questions" *ngIf="item === 'Checkbox'" [(ngModel)]= "questions"></app-checkbox>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <button class ="Sub"><a routerLink="../conclude" (click)="handleEdu($event)"> SUBMIT </a></button>
+  </body>
