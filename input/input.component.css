@@ -12,3 +12,10 @@
     background-color:white ;
     width :fit-content;
   }
+
+  text{
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    right : 25px;
+  }

@@ -13,21 +13,21 @@
                         <div class="input-field">
                             <span class="fa fa-user p-2"></span>
                             <!-- ngModel is used to do twoway databinding -->
-                            <input name = "firstName" type="text" placeholder="FirstName"  [(ngModel)]="firstName">
+                            <input name = "firstName" type="text" placeholder="FirstName"  [(ngModel)]= "firstName">
 
                         </div>
                     </div>
                     <div class="form-group pt-3">
                         <div class="input-field">
                             <span class="fa fa-user p-2"></span>
-                            <input name="lastName" type="text" placeholder="LastName" [(ngModel)]="lastName">
+                            <input name="lastName" type="text" placeholder="LastName" [(ngModel)]= "lastName">
 
                         </div>
                     </div>
                         <div class="form-group pt-3">
                             <div class="input-field">
                                 <span class="fa fa-envelope p-2"></span>
-                                <input type="text" name="email" placeholder="Email"  [(ngModel)]="email">
+                                <input type="text" name="email" placeholder="Email"  [(ngModel)]= "email">
 
                             </div>
                         </div>
@@ -35,7 +35,7 @@
                         <div class="form-group pt-3">
                             <div class="input-field">
                                 <span class="fa fa-user p-2"></span>
-                                <input type="text" name="username" placeholder="Username"  [(ngModel)]="username">
+                                <input type="text" name="username" placeholder="Username"  [(ngModel)]= "username">
 
                             </div>
                         </div>
@@ -43,11 +43,11 @@
                             <div class="input-field">
                                 <span class="fa fa-lock p-2"></span>
                                 <!-- [type] is property binding  -->
-                                <input [type]="type" name="password" value="" placeholder="Password"  [(ngModel)]="password">
+                                <input [type]="type" name="password" value="" placeholder="Password"  [(ngModel)]= "password">
                                 <span (click) = "hideShowPass()"class="fa fa-eye-slash"></span>
                             </div>
                         </div>
-                          <button type="submit" class="btn btn-primary btn-block mt-4 w-100" (click)="handleSubmit($event)">Sign Up</button> 
+                          <button type="submit" class="btn btn-primary btn-block mt-4 w-100" (click)= "handleSubmit($event)">Sign Up</button> 
                           <!-- routerlink is like href in a tag -->
                           <div class="text-center pt-4 text-muted">Already have account? <a id="forget" routerLink="/login">Login</a></div>
 

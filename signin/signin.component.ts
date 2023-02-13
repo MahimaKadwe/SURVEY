@@ -37,12 +37,10 @@ export class SigninComponent implements OnInit {
 
   handleSubmit (event: Event){
     event.preventDefault();
-
-
     //get user inputs
     //event.target.password
-    this.firstName="";
-    this.lastName="";
+    //this.firstName="";
+    //this.lastName="";
     const userInput={
       username: this.username,
       email: this.email,
@@ -50,14 +48,11 @@ export class SigninComponent implements OnInit {
 
 
     }
-
-    
-
     //console.log("userInput", userInput)
     
     
     //api call
-    const apiRes=axios.post("http://localhost:5000/users/signup", userInput)
+    const apiRes=axios.post("http://localhost:3000/users/signup", userInput)
 
     console.log(apiRes)
     this.username="";

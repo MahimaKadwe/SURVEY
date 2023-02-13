@@ -2,6 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators } from '@angular/forms';
 import axios from 'axios';
+import { Router } from '@angular/router';
 //import {AuthServiceService} from '../../auth-service.service';
 
 
@@ -19,7 +20,9 @@ export class LoginComponent implements OnInit {
   password :any;
   message: boolean=false;
   // formGroup: FormGroup;
-  constructor(){ }
+  constructor(
+    public router:Router
+    ){ }
   ngOnInit() {
     //this.initForm();
     
@@ -69,11 +72,13 @@ export class LoginComponent implements OnInit {
   
     console.log("userInput", userInput)
    //api call
-   const apiRes=axios.post("http://localhost:5000/users/signin", userInput).then(response=>{
-    alert(response.data.message)
+   const apiRes= axios.post("http://localhost:3000/users/signin", userInput).then(response=>{
+    //alert(response.data.message)
     if(response.data.message=="Invalid Credentials"){
     this.message=false;
-    }else{this.message=true;}
+    }else{this.message=true;
+        this.router.navigate(['/signup'])
+    }
     
    })
 

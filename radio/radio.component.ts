@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./radio.component.css']
 })
 export class RadioComponent {
+text: any;
 
 }

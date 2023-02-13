@@ -42,12 +42,12 @@
         </div> -->
         <div class="example-box" *ngFor="let item of currentContainer, let i =index" cdkDrag>
           <div class="box">
-            <button (click)="deleteTask(i)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            <button class = "delete" (click)="deleteTask(i)"><i class="fa fa-trash" aria-hidden="true"></i></button>
           
-        
-          <app-input name="questions" *ngIf="item === 'Input'" [(ngModel)]= "questions"></app-input>
-          <app-radio name="questions" *ngIf="item === 'Radio'" [(ngModel)]= "questions"></app-radio>
-          <app-checkbox name="questions" *ngIf="item === 'Checkbox'" [(ngModel)]= "questions"></app-checkbox>
+          <div class="container" *ngFor="let item of questions , let i = index " ></div> 
+          <app-input  *ngIf="item === 'Input'" [(ngModel)]= "questions"></app-input>
+          <app-radio *ngIf="item === 'Radio'" [(ngModel)]= "questions"></app-radio>
+          <app-checkbox  *ngIf="item === 'Checkbox'" [(ngModel)]= "questions"></app-checkbox>
         </div>
       </div>
     </div>

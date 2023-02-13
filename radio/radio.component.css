@@ -8,3 +8,15 @@
     font-family: 'Times New Roman', Times, serif;
     tab-size: 30px;
   }
+
+  .text{
+    margin-bottom: 20px;
+  }
+
+  .container{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    right : 20px;
+  }

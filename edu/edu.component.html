@@ -43,7 +43,7 @@
       </div> -->
       <div class="example-box" *ngFor="let item of currentContainer, let i =index" cdkDrag>
         <div class="box">
-          <button (click)="deleteTask(i)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+          <button class = "delete" (click)="deleteTask(i)"><i class="fa fa-trash" aria-hidden="true"></i></button>
         
         <app-input *ngIf="item === 'Divider'"></app-input>
         <app-input *ngIf="item === 'Text-field'"></app-input>
